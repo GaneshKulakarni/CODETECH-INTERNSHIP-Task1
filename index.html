@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My potfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Fontdiner+Swanky&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Oxanium:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Fontdiner+Swanky&family=Galindo&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Oxanium:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* display: flex; */
+            /* justify-content: center; */
+            max-width: 100vw;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        nav {
+
+            max-width: 100vw;
+            cursor: pointer;
+            position: sticky;
+            z-index: 2;
+            top: 0;
+            background-color: white;
+        }
+
+        .nav-container {
+            max-width: 100vw;
+            display: flex;
+            justify-content: space-between;
+            height: 60px;
+            background-color: white;
+            /* border: 2px solid red; */
+            box-shadow: 5px 5px 5px rgba(1, 1, 1, 0.1);
+
+        }
+
+        .tags a {
+            color: black;
+
+        }
+
+        .tags li a {
+            text-decoration: none;
+        }
+
+        nav ul {
+            font-family: "Host Grotesk", sans-serif;
+
+            height: 58px;
+            /* padding: 0 1050px; */
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            text-decoration: none;
+        }
+
+
+        nav ul li {
+            list-style: none;
+            padding: 0 9px;
+
+        }
+
+
+        .main-container {
+            max-width: 100vw;
+            /* max-width: 1400px; */
+
+            position: sticky;
+            z-index: 0;
+        }
+
+        main {
+            max-width: 100vw;
+            /* max-width: 1400px; */
+            position: sticky;
+            z-index: 0;
+            margin-top: 1px;
+        }
+
+        .colour {
+            background-color: #3a7dd6;
+            height: 401px;
+            width: 613px;
+            display: flex;
+            position: relative;
+            top: -335px;
+            left: 650px;
+        }
+
+        .colour {
+            display: flex;
+            position: relative;
+            top: 70px;
+            left: 650px;
+        }
+
+        .profile {
+            display: flex;
+            top: -203px;
+            position: relative;
+            left: 462px;
+        }
+
+        .name {
+            position: relative;
+            top: -346px;
+            left: 222px;
+            font-family: "Galindo", sans-serif;
+            font-size: 30px;
+            text-shadow:
+                -1px -1px 0 white,
+                /* Top-left */
+                1px -1px 0 white,
+                /* Top-right */
+                -1px 1px 0 white,
+                /* Bottom-left */
+                1px 1px 0 white;
+        }
+
+        .name span {
+            color: #287FF0;
+        }
+
+        .shake {
+            position: relative;
+            top: -636px;
+            left: 230px;
+            color: #287FF0;
+            font-family: "Galindo", sans-serif;
+            font-size: 20px;
+            height: 100px;
+            width: 100px;
+        }
+      
+
+        .About h3,
+        p {
+            font-family: "Galindo", sans-serif;
+            display: flex;
+            justify-content: center;
+        }
+
+        p {
+            color: #287FF0;
+            line-height: 1.9;
+            font-size: 19px;
+            padding: 0 65px;
+            line-height: calc(1em + 16px);
+
+        }
+
+        .About {
+            position: relative;
+            top: -200px;
+            margin-bottom: 0px;
+        }
+
+        .About .quote {
+            position: relative;
+            top: 60px;
+            font-size: 30px;
+            color: black;
+        }
+
+
+        .footer h5 {
+            background-color: #287FF0;
+            /* Set the background color */
+            color: white;
+            /* Keep text color white */
+            display: flex;
+            justify-content: center;
+            /* Center the icons horizontally */
+            align-items: center;
+            /* Center the icons vertically */
+            height: 300px;
+            position: relative;
+            top: 70px;
+            left: 300px;
+            font-size: large;
+
+        }
+
+        .About .dev {
+            color: #287FF0;
+        }
+
+        .About h {
+            font-family: "Galindo", sans-serif;
+            font-size: 60px;
+            position: relative;
+            top: -130px;
+            left: 270px;
+            text-shadow:
+                -1px -1px 0 white,
+                /* Top-left */
+                1px -1px 0 white,
+                /* Top-right */
+                -1px 1px 0 white,
+                /* Bottom-left */
+                1px 1px 0 white;
+        }
+
+        .footer {
+            background-color: #287FF0;
+            height: 300px;
+            display: flex;
+            position: relative;
+            top: 200px;
+        }
+
+        .social-icons a {
+            color: white;
+            /* Make icons white */
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: #ddd;
+            /* Slightly lighter white on hover */
+        }
+
+        .social-icons i {
+            transition: transform 0.2s;
+            /* Add a hover effect */
+        }
+
+        .social-icons a:hover i {
+            transform: scale(1.1);
+            /* Scale up on hover */
+        }
+
+        .icon-text {
+            font-family: system-uie;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        .contact-info {
+            color: white;
+            /* Set text color to white */
+        }
+
+        .contact-info i {
+            color: white;
+            /* Ensure icons are also white */
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-info :hover {
+            text-decoration: underline;
+        }
+
+        .d-flex {
+            margin-bottom: 8px;
+        }
+
+        .fas {
+            position: relative;
+            top: 19px;
+
+        }
+
+        #email {
+            margin-top: 15px;
+        }
+
+        #em-con {
+            margin-top: 19px;
+        }
+
+        #tel-con {
+            margin-top: 5px;
+        }
+
+        .thank {
+            color: white;
+            position: relative;
+            top: 200px;
+        }
+        @media screen and (max-width:800px) {
+            .main-container{
+                display:flex;
+                justify-content:center;
+            }
+            
+        }
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="IMG/logo.jpg" alt="logo" width="50px" height="50px">
+            </div>
+            <ul class="tags">
+                <li><a href="http://127.0.0.1:3000/index.html"><b>Home</b></a></li>
+                <!-- <li><a href="#"></a><b>About</b></li> -->
+                <li><a href="http://127.0.0.1:3000/projects.html"><b>Project</b></a></li>
+                <li><a href="http://127.0.0.1:3000/skills.html"><b>Skill</b></a></li>
+                <li><a href="http://127.0.0.1:3000/contact.html"><b>Contact</b></a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+
+        <div class="main-container">
+            <div class="main">
+                <div class="colour"></div>
+                <div class="image">
+                    <div class="profile">
+                        <img src="IMG/profile.jpg" alt="profile">
+                    </div>
+                </div>
+                <div class="name">
+                    <h1>
+                        I'am
+                        <span>
+                            Marley<br>
+                            Jay
+                        </span>
+                    </h1>
+                </div>
+                <div class="shake">
+                    <h2>Hello...!<br>
+                        🖐️
+                    </h2>
+                </div>
+                <div class="About">
+                    <h class="role"><b> I am a <span class="dev"> Software Developer!</span></h>
+                    <h3>About Me...</h3>
+                    <p>Hi, I’m Marley Jay—a versatile developer and tech enthusiast with a passion for innovation
+                        and
+                        creating impactful solutions. My journey in technology has equipped me with expertise across
+                        multiple domains, making me a well-rounded professional capable of handling diverse
+                        challenges.<br>
+
+                        I am highly skilled in Kotlin and Java, where I specialize in developing robust,
+                        high-performance applications. My experience in web development extends to designing
+                        responsive
+                        and dynamic websites, blending functionality with aesthetics. My proficiency in UI/UX design
+                        ensures that every project I work on delivers seamless, user-centric experiences.<br>
+
+                        In addition to development, I have a strong foundation in Python and data science, enabling
+                        me
+                        to analyze data effectively and derive actionable insights to inform strategic decisions.
+                        Whether it’s building mobile apps, crafting websites, or working on data-driven projects, I
+                        strive to create solutions that are not only efficient but also innovative and
+                        meaningful.<br>
+
+
+                        With a commitment to continuous learning, I’m always exploring new technologies and
+                        frameworks
+                        to stay ahead of the curve. I believe in the power of collaboration and look forward to
+                        working
+                        on projects that challenge me to grow and make a real impact. Let’s turn ideas into reality
+                        together!<br></p>
+                    <p class="quote">
+                        Building the future, one line of code at a time. Let's innovate together!
+                    </p>
+                    <div class="footer">
+                        <!-- <div class="thank">Made with ❤️ by<span> Sonu Sourav</span></div> -->
+                        <!-- <body style="background-color: #333;"> Dark background for contrast -->
+                        <div class="container text-center py-5">
+                            <h1 class="text-white">Follow Me</h1>
+                            <div class="social-icons d-flex justify-content-center gap-4 mt-3">
+                                <div>
+                                    <a href="https://instagram.com" target="_blank">
+                                        <i class="fab fa-instagram fa-2x"><br>
+                                            <div class="icon-text">Instagram</div>
+                                        </i>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="https://linkedin.com" target="_blank">
+                                        <i class="fab fa-linkedin fa-2x">
+                                            <div class="icon-text">Linkedin</div>
+                                        </i>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="https://facebook.com" target="_blank">
+                                        <i class="fab fa-facebook fa-2x">
+                                            <div class="icon-text">Facebook</div>
+                                        </i>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="https://github.com" target="_blank">
+                                        <i class="fab fa-github fa-2x">
+                                            <div class="icon-text">Git-Hub</div>
+                                        </i>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="contact-info mt-5">
+                            <h2>Contact Information</h2>
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-map-marker-alt fa-lg me-3"></i>
+                                <span id="address">"1600 Pennsylvania Avenue NW, Washington, USA"</span>
+                            </div>
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-phone fa-lg me-3"></i>
+                                <span id="tel-con">+1 555-987-6543</span>
+                            </div>
+                            <div class="d-flex align-items-start">
+                                <i id="email" class="fas fa-envelope fa-lg me-3"></i>
+                                <a id="em-con" href="mailto:example@example.com">marletjay@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </main>
+
+
+</body>
+
+</html>
